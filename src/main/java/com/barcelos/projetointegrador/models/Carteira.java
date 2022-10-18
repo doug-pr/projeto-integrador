@@ -15,6 +15,7 @@ import java.util.Date;
 @Builder
 @Table(name = "carteira")
 public class Carteira {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")

@@ -14,6 +14,7 @@ import javax.persistence.*;
 @Builder
 @Table(name = "documento")
 public class Documento {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")

@@ -10,6 +10,7 @@ import javax.persistence.*;
 @Builder
 @Table(name = "pessoa")
 public class Pessoa {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
