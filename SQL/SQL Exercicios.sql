@@ -40,6 +40,6 @@ SELECT * FROM (
 		id_produto;
 
 #Exercicio 5
-DELETE FROM produto WHERE id_produto = 10;
+DELETE FROM produto WHERE nome = "Tênis Alterado";
 
 SELECT ROW_NUMBER() OVER (ORDER BY id_produto) AS linha, id_produto, nome, preco, codigo FROM produto WHERE linha = 3 ORDER BY id_produto;
