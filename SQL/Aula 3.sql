@@ -45,3 +45,4 @@ SELECT * FROM produto ORDER BY id_produto ASC;
 #Exercicio 8
 SELECT * FROM produto WHERE nome LIKE '%branco%' OR nome LIKE '%preto%';
 
+DROP TABLE produto;

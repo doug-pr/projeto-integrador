@@ -19,4 +19,20 @@ INSERT INTO categoria (nome) VALUES ('Joias');
 
 SELECT * FROM categoria;
 
+SELECT * FROM produto;
+
+ALTER TABLE produto ADD PRIMARY KEY(id_produto);
+
+ALTER TABLE produto ADD (id_categoria INT);
+
+UPDATE produto SET id_categoria = 1;
+
 ALTER TABLE produto ADD FOREIGN KEY(id_categoria) REFERENCES categoria(id);
+
+ALTER TABLE categoria DROP COLUMN id_categoria;
+
+INSERT INTO `produto` (`id_produto`, `nome`, `preco`, `codigo`) VALUES (1050, 'Puxador Franco Zamac Escovado 192mm', 19.10, '13882');
+
+INSERT INTO `produto` (`id_produto`, `nome`, `preco`, `codigo`, `id_categoria`) VALUES (1051, 'Cavilha Madeira 10 x 40mm com 100 unidades', 7.50, '1335', 5);
+
+SELECT * FROM produto ORDER BY codigo;
