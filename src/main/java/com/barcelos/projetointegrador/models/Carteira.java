@@ -18,8 +18,8 @@ public class Carteira {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private Long id;
+    @Column(name = "id_carteira")
+    private Long id_carteira;
 
     @Column(name = "nome")
     private String nome;
