@@ -21,7 +21,22 @@ public class PessoaServiceImpl implements PessoaService {
         return pessoaRepository.save(pessoa);
     }
     @Override
-    public Pessoa salvar(Pessoa pessoa){
+    public Pessoa salvar(Pessoa pessoa) throws Exception {
+
+        List<Pessoa> listaDeCpf = pessoaRepository.findAll();
+        for(Pessoa pessoa1: listaDeCpf){
+            if(pessoa.getDocumento().getCpf().equals(pessoa1.getDocumento().getCpf())){
+                throw new Exception("CPF Já existe, insira novamente!");
+            }
+        }
+
+        List<Pessoa> listaDeRg = pessoaRepository.findAll();
+        for(Pessoa pessoa2: listaDeRg){
+            if(pessoa.getDocumento().getRg().equals(pessoa2.getDocumento().getRg())){
+                throw new Exception("RG Já existe, insira novamente!");
+            }
+        }
+
         return pessoaRepository.save(pessoa);
     }
     @Override

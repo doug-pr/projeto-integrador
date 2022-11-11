@@ -1,5 +1,6 @@
 package com.barcelos.projetointegrador.services;
 
+import com.barcelos.projetointegrador.models.Carteira;
 import com.barcelos.projetointegrador.models.Taxa;
 import com.barcelos.projetointegrador.repositories.TaxaRepository;
 import org.springframework.stereotype.Service;
@@ -21,7 +22,13 @@ public class TaxaServiceImpl implements TaxaService {
         return taxaRepository.save(taxa);
     }
     @Override
-    public Taxa salvar(Taxa taxa){
+    public Taxa salvar(Taxa taxa) throws Exception {
+        List<Taxa> listaDeTaxa = taxaRepository.findAll();
+        for(Taxa taxa1: listaDeTaxa){
+            if(taxa.getNome().equals(taxa1.getNome()) || taxa.getNome() == null){
+                throw new Exception("Nome Já existe ou é nulo, insira novamente!");
+            }
+        }
         return taxaRepository.save(taxa);
     }
     @Override

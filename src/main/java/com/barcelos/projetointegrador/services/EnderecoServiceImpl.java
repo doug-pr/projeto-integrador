@@ -1,5 +1,6 @@
 package com.barcelos.projetointegrador.services;
 
+import com.barcelos.projetointegrador.models.Carteira;
 import com.barcelos.projetointegrador.models.Endereco;
 import com.barcelos.projetointegrador.repositories.EnderecoRepository;
 import org.springframework.stereotype.Service;
@@ -21,7 +22,13 @@ public class EnderecoServiceImpl implements EnderecoService {
         return enderecoRepository.save(endereco);
     }
     @Override
-    public Endereco salvar(Endereco endereco){
+    public Endereco salvar(Endereco endereco) throws Exception {
+        List<Endereco> listaDeCep = enderecoRepository.findAll();
+        for(Endereco endereco1: listaDeCep){
+            if(endereco.getCep().equals(endereco1.getCep())){
+                throw new Exception("CEP Já existe, insira novamente!");
+            }
+        }
         return enderecoRepository.save(endereco);
     }
     @Override
