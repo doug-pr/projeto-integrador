@@ -9,7 +9,15 @@ Validações:
 - [x] Não deixar salvar um Documento com o mesmo CPF ou RG; 
 - [x] Não deixar salvar um Endereço com o mesmo CEP;
 
+- [ ] Criar Método chamado 'adicionarTaxa', o método deve conter as seguintes funcionalidades: 
 
+    Funcionalidades:
+       - [ ] Buscar todas as taxa existentes no banco de dados;
+       - [ ] Aumentar o saldo de todos os cliente de acordo com a porcentagem da taxa registrada no cliente.
+
+Obs: Novo método deve ser criado dentro de PessoaServiceImpl;
+
+<img src="https://github.com/doug-pr/projeto-integrador/blob/main/DER%20Projeto%20Integrador%20Senac.svg">
 
 
 > Status do Projeto: Em desenvolvimento :warning:
