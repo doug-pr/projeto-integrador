@@ -12,14 +12,13 @@ Projeto Integrador Senac 2022 - Software de Gerenciamento de Poupança. checkere
 - [ ] Criar Método chamado 'adicionarTaxa', o método deve conter as seguintes funcionalidades: 
 
     ### Funcionalidades:
-       - [ ] Buscar todas as taxa existentes no banco de dados;
-       - [ ] Aumentar o saldo de todos os cliente de acordo com a porcentagem da taxa registrada no cliente.
+    - [ ] Buscar todas as taxa existentes no banco de dados;
+    - [ ] Aumentar o saldo de todos os cliente de acordo com a porcentagem da taxa registrada no cliente.
 
 Obs: Novo método deve ser criado dentro de PessoaServiceImpl;
 
 ## DER - Diagrama de Entidade e Relacionamento
 <img src="https://github.com/doug-pr/projeto-integrador/blob/main/DER%20Projeto%20Integrador%20Senac.svg">
-
 
 > Status do Projeto: Em desenvolvimento :warning:
 
