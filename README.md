@@ -9,6 +9,7 @@ Projeto Integrador Senac 2022 - Software de Gerenciamento de Poupança. checkere
 - [x] Não deixar salvar um Documento com o mesmo CPF ou RG; 
 - [x] Não deixar salvar um Endereço com o mesmo CEP;
 
+## Métodos:
 - [ ] Criar Método chamado 'adicionarTaxa', o método deve conter as seguintes funcionalidades: 
 
     ### Funcionalidades:
