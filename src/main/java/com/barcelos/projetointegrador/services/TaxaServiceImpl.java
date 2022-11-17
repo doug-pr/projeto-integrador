@@ -1,5 +1,6 @@
 package com.barcelos.projetointegrador.services;
 
+import com.barcelos.projetointegrador.exceptions.EntityNotFoundException;
 import com.barcelos.projetointegrador.models.Carteira;
 import com.barcelos.projetointegrador.models.Taxa;
 import com.barcelos.projetointegrador.repositories.TaxaRepository;
@@ -26,7 +27,7 @@ public class TaxaServiceImpl implements TaxaService {
         List<Taxa> listaDeTaxa = taxaRepository.findAll();
         for(Taxa taxa1: listaDeTaxa){
             if(taxa.getNome().equals(taxa1.getNome()) || taxa.getNome() == null){
-                throw new Exception("Nome Já existe ou é nulo, insira novamente!");
+                throw new EntityNotFoundException("Nome Já existe ou é nulo, insira novamente!");
             }
         }
         return taxaRepository.save(taxa);

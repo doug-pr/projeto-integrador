@@ -3,6 +3,7 @@ package com.barcelos.projetointegrador.DTO;
 import com.barcelos.projetointegrador.models.Carteira;
 import com.barcelos.projetointegrador.models.Documento;
 import com.barcelos.projetointegrador.models.Endereco;
+import com.barcelos.projetointegrador.models.Taxa;
 import lombok.Data;
 
 @Data
@@ -27,4 +28,6 @@ public class PessoaDTO {
     private String dependentes;
 
     private Carteira carteira;
+
+    private Taxa taxa;
 }

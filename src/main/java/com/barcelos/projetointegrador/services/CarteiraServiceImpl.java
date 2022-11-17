@@ -1,5 +1,6 @@
 package com.barcelos.projetointegrador.services;
 
+import com.barcelos.projetointegrador.exceptions.EntityNotFoundException;
 import com.barcelos.projetointegrador.models.Carteira;
 import com.barcelos.projetointegrador.models.Pessoa;
 import com.barcelos.projetointegrador.repositories.CarteiraRepository;
@@ -27,7 +28,7 @@ public class CarteiraServiceImpl implements CarteiraService{
         List<Carteira> listaDeCarteira = carteiraRepository.findAll();
         for(Carteira carteira1: listaDeCarteira){
             if(carteira.getNome().equals(carteira1.getNome()) || carteira.getNome() == null){
-                throw new Exception("Carteira Já existe ou é nula, insira novamente!");
+                throw new EntityNotFoundException("Carteira Já existe ou é nula, insira novamente!");
             }
         }
         return carteiraRepository.save(carteira);

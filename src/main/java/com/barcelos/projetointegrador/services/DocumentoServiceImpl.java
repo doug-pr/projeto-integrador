@@ -1,5 +1,6 @@
 package com.barcelos.projetointegrador.services;
 
+import com.barcelos.projetointegrador.exceptions.EntityNotFoundException;
 import com.barcelos.projetointegrador.models.Carteira;
 import com.barcelos.projetointegrador.models.Documento;
 import com.barcelos.projetointegrador.repositories.DocumentoRepository;
@@ -26,14 +27,14 @@ public class DocumentoServiceImpl implements DocumentoService{
         List<Documento> listaDeCpf = documentoRepository.findAll();
         for(Documento documento2: listaDeCpf){
             if(documento.getCpf().equals(documento2.getCpf())){
-                throw new Exception("CPF Já existe, insira novamente!");
+                throw new EntityNotFoundException("CPF Já existe, insira novamente!");
             }
         }
 
         List<Documento> listaDeRg = documentoRepository.findAll();
         for(Documento documento3: listaDeRg){
             if(documento.getRg().equals(documento3.getRg())){
-                throw new Exception("RG Já existe, insira novamente!");
+                throw new EntityNotFoundException("RG Já existe, insira novamente!");
             }
         }
 

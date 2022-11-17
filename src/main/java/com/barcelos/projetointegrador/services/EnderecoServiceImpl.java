@@ -1,5 +1,6 @@
 package com.barcelos.projetointegrador.services;
 
+import com.barcelos.projetointegrador.exceptions.EntityNotFoundException;
 import com.barcelos.projetointegrador.models.Carteira;
 import com.barcelos.projetointegrador.models.Endereco;
 import com.barcelos.projetointegrador.repositories.EnderecoRepository;
@@ -26,7 +27,7 @@ public class EnderecoServiceImpl implements EnderecoService {
         List<Endereco> listaDeCep = enderecoRepository.findAll();
         for(Endereco endereco1: listaDeCep){
             if(endereco.getCep().equals(endereco1.getCep())){
-                throw new Exception("CEP Já existe, insira novamente!");
+                throw new EntityNotFoundException("CEP Já existe, insira novamente!");
             }
         }
         return enderecoRepository.save(endereco);
