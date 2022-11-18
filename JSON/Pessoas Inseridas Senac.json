@@ -1,0 +1,87 @@
+{
+    "nome": "Avelina",
+    "documento": {
+        "cpf": "836.109.421-96",
+        "rg": "7.654.987-7"
+    },
+    "endereco": {
+        "logradouro": "Rua Tókio",
+        "numeroCasa": "387",
+        "cep":"87540-310",
+        "referencia": "Próximo Associação São Jorge"
+    },
+    "genero": "Feminino",
+    "idade": 63,
+    "rendimentoMensal": 3000,
+    "estadoCivil": "Solteira",
+    "dependentes": "Filha",
+    "carteira": {
+        "nome": "Carteira Especial",
+        "saldoAtual": 970000,
+        "dataInicioInvestimento": "2022-11-17",
+        "dataTerminoInvestimento": "2023-09-14"
+    },
+    "taxa":{
+        "nome": "CDB 120%",
+        "porcentagem": 12.24
+    }
+}
+#########################################################
+{
+    "nome": "Douglas Barcelos",
+    "documento": {
+        "cpf": "036.699.589-83",
+        "rg": "8.077.615-2"
+    },
+    "endereco": {
+        "logradouro": "Rua Pio XII",
+        "numeroCasa": "405",
+        "cep":"87710-310",
+        "referencia": "Casa 4 - Próximo Harmonia"
+    },
+    "genero": "Masculino",
+    "idade": 40,
+    "rendimentoMensal": 4000,
+    "estadoCivil": "Casado",
+    "dependentes": "Esposa",
+    "carteira": {
+        "nome": "Carteira Douglas",
+        "saldoAtual": 10000000,
+        "dataInicioInvestimento": "2022-11-17",
+        "dataTerminoInvestimento": "2023-09-14"
+    },
+    "taxa":{
+        "nome": "CDB 120%",
+        "porcentagem": 12.24
+    }
+}
+###################################################################
+{
+    "nome": "GUilherme Foltran",
+    "documento": {
+        "cpf": "021.875.541-75",
+        "rg": "4.315.812-9"
+    },
+    "endereco": {
+        "logradouro": "Rua Souza Naves",
+        "numeroCasa": "502",
+        "cep":"87980-150",
+        "referencia": "Próximo Estádio"
+    },
+    "genero": "Masculino",
+    "idade": 25,
+    "rendimentoMensal": 2900,
+    "estadoCivil": "Solteiro",
+    "dependentes": "Mãe",
+    "carteira": {
+        "nome": "Carteira Arioch",
+        "saldoAtual": 298000,
+        "dataInicioInvestimento": "2022-11-15",
+        "dataTerminoInvestimento": "2023-09-07"
+    },
+    "taxa":{
+        "id_taxa": 3,
+        "nome": "CDB 109%",
+        "porcentagem": 11.12
+    }
+}
