@@ -21,16 +21,16 @@ public class ControllerExceptionHandler {
         //ZoneId zone = ZoneId.systemDefault();
         //ZonedDateTime zDateTime = ZonedDateTime.now(zone);
 
-        String currentTimeStamp = DateTimeFormatter.ofPattern("dd/MM/yyyy - HH:mm:ss").format(LocalDateTime.now());
+        String currentTimeStampFormatted = DateTimeFormatter.ofPattern("dd/MM/yyyy - HH:mm:ss").format(LocalDateTime.now());
 
         StandardException err = new StandardException();
-        err.setTimestamp(String.valueOf(currentTimeStamp));
+        err.setTimestamp(String.valueOf(currentTimeStampFormatted));
         err.setStatus(String.valueOf(HttpStatus.NOT_FOUND.value()));
         err.setError(e.getMessage());
         err.setTrace("Nome_Arquivo: " + Arrays.stream(
                 e.getStackTrace()).findFirst().get().getFileName() +
                 " | Linha: " + Arrays.stream(e.getStackTrace()).findFirst().get().getLineNumber() +
-                " | Nome_Método: " + Arrays.stream(e.getStackTrace()).findFirst().get().getMethodName());
+                " | Nome_Metodo: " + Arrays.stream(e.getStackTrace()).findFirst().get().getMethodName());
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(err);
     }
 }

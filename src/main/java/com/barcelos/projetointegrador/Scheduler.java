@@ -15,7 +15,9 @@ public class Scheduler {
     public Scheduler(PessoaServiceImpl pessoaService){
         this.pessoaService = pessoaService;
     }
-    @Scheduled(initialDelay = 1000, fixedRate = 1500000)
+
+    //@Scheduled(initialDelay = 1000, fixedRate = 1500000) // Agendar milisegundos
+    @Scheduled(cron = "@monthly") // Agendar mensalmente
     public void executaAgendamentos(){
         pessoaService.adicionarTaxa();
         System.out.println("O agendamento foi iniciado!");
