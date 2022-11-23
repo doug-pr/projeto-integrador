@@ -8,13 +8,14 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@EqualsAndHashCode(of = "id")
 @Table(name = "pessoa")
 public class Pessoa {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_pessoa")
-    private Long id_pessoa;
+    private Long id;
 
     @Column(name = "nome")
     private String nome;
